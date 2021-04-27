@@ -2,7 +2,7 @@ const apiKey="e2d6DarbfrQBF2icLJjjLi0Nv9CSePK5";
 
 //Get the location key of the assigned location
 const getLocationKey= async (city)=>{
-    const baseUrl = "http://dataservice.accuweather.com/locations/v1/cities/search";
+    const baseUrl = "https://dataservice.accuweather.com/locations/v1/cities/search";
     const query=`?apikey=${apiKey}&q=${city}`;
     const resource=await fetch(baseUrl+query);
     const data=await resource.json();
@@ -17,7 +17,7 @@ const getLocationKey= async (city)=>{
 // get the wether info
 
 const getWeather=async(cityKey)=>{
-    const baseUrl=`http://dataservice.accuweather.com/currentconditions/v1/${cityKey}`
+    const baseUrl=`https://dataservice.accuweather.com/currentconditions/v1/${cityKey}`
     const query=`?apikey=${apiKey}`;
     const response=await fetch(baseUrl+query);
     const data=await response.json();
