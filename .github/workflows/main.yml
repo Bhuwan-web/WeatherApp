@@ -35,7 +35,7 @@ jobs:
     needs: create_scan_in_IR_Portal
     services:
       pse:
-        image: kkisalaya/pse-proxy:dev
+        image: 282904853176.dkr.ecr.us-west-2.amazonaws.com/invisirisk/pse-proxy:dev-test
         env:
           PSE_DEBUG_FLAG: --alsologtostderr
           POLICY_LOG: t
